@@ -27,7 +27,7 @@ public:
 
 	bool hit();
 	bool isAlive();
-	void spawn(float startX, float startY, int type, int seed);
+	void spawn(float startX, float startY, int type);
 	FloatRect getPosition();
 	Sprite getSprite();
 	void update(float elapsedTime, Vector2f playerLocation);
