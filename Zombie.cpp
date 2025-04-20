@@ -18,7 +18,7 @@ bool Zombie::isAlive() {
 	return m_Alive;
 }
 
-void Zombie::spawn(float startX, float startY, int type, int seed) {
+void Zombie::spawn(float startX, float startY, int type) {
 	switch (type) {
 	case 0:
 		m_Sprite = Sprite(TextureHolder::GetTexture("graphics/bloater.png"));
@@ -37,7 +37,7 @@ void Zombie::spawn(float startX, float startY, int type, int seed) {
 		break;
 	}
 
-	srand((int)time(0) * seed);
+	srand((int)time(0));
 	float modifier = (rand() % MAX_VARIANCE) + OFFSET; 
 	modifier /= 100;
 	m_Speed *= modifier;
